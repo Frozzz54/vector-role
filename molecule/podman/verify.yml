@@ -1,0 +1,9 @@
+---
+- name: Verify
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: ensure vector service started
+      ansible.builtin.service:
+        name: vector
+        state: started
